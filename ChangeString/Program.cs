@@ -22,6 +22,7 @@ namespace ChangeString
                 else
                 {
                     stringFinal += f;
+                }
             }
             Console.WriteLine(stringFinal);
 
