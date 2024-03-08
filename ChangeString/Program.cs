@@ -19,12 +19,9 @@ namespace ChangeString
                 {
                     stringFinal += "X";
                 }
-                // Se não
                 else
                 {
-                    // Coloca igual
                     stringFinal += f;
-                }
             }
             Console.WriteLine(stringFinal);
 
