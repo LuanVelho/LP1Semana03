@@ -6,14 +6,27 @@ namespace ChangeString
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Escreva uma string:");
+            Console.Write("Introduza uma frase: ");
             string frase = Console.ReadLine();
-            Console.WriteLine("Escreva uma letra para substituir");
+            Console.Write("Introduza um caractere para ser substituido: ");
             string letra = Console.ReadLine();
-            foreach (f in frase)
-                if (f == letra)
-                    Console.Write("X");
-                else (Console.WriteLine(f));
+            char caractere = char.Parse(letra);
+
+            string stringFinal = "";
+            foreach (char f in frase)
+            {
+                if (f == caractere)
+                {
+                    stringFinal += "X";
+                }
+                // Se não
+                else
+                {
+                    // Coloca igual
+                    stringFinal += f;
+                }
+            }
+            Console.WriteLine(stringFinal);
 
         }
     }
