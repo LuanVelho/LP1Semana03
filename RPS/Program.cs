@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace RPS
 {
@@ -23,20 +24,25 @@ namespace RPS
 
         private static int RockPaperScissors(string player1, string player2)
         {
+            int caso = 0;
+            int caso1 = 1;
+            int caso2 = 2;
+            int casocorreto = 0;
             if (player1 == player2)
             {
-                return 0; // Draw
+                casocorreto = caso; // Draw
             }
             if (((player1 == "Rock") && (player2 == "Scissors")) ||
                 ((player1 == "Scissors") && (player2 == "Paper")) ||
                 ((player1 == "Paper") && (player2 == "Rock")))
             {
-                return 1; // Player 1 wins
+                casocorreto = caso1; // Player 1 wins
             }
             else
             {
-                return 2; // Player 2 wins
+                casocorreto = caso2;// Player 2 wins
             }
+            return casocorreto;
         }
     }
 }
